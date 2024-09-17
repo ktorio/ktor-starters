@@ -1,6 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
-rootProject.name = "ktor-htmx-hackathon"
+rootProject.name = "ktor-starter-demo"
 
 pluginManagement {
     includeBuild("build-logic")
@@ -22,9 +22,9 @@ plugins {
 }
 
 include(
-    ":subprojects:extension-ktor",
-    ":subprojects:extension-kotlinx-html",
-    ":subprojects:sample-ktor-kotlinx-html",
+    ":subprojects:starter-ktor-web",
+    ":subprojects:starter-ktor-exposed",
+    ":subprojects:sample",
 )
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
