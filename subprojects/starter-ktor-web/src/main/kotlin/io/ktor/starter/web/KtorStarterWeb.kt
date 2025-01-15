@@ -8,18 +8,11 @@ import io.ktor.server.plugins.compression.*
 import io.ktor.server.plugins.contentnegotiation.*
 
 fun main() {
-    startServer {
-        defaultConfiguration()
-    }
-}
-
-inline fun startServer(port: Int = 8080, crossinline configuration: Application.() -> Unit = {}) {
     embeddedServer(
         factory = Netty,
-        port = port,
+        port = 8080,
         module = {
-            this.defaultConfiguration()
-            this.configuration()
+            defaultConfiguration()
         }
     ).start(wait = true)
 }

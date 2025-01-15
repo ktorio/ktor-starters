@@ -7,7 +7,7 @@ kotlin {
 }
 
 dependencies {
-    implementation(libs.gradlePlugin.kotlin)
+    implementation(libs.kotlin.gradle.plugin)
 
     // workaround for accessing version-catalog in convention plugins
     // https://github.com/gradle/gradle/issues/15383#issuecomment-779893192
